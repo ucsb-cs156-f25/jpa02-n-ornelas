@@ -24,7 +24,33 @@ public class DeveloperTest {
     public void getName_returns_correct_name() {
         // TODO: Replace Chris G. with your name as shown on
         // <https://bit.ly/cs156-f25-teams>
-        assertEquals("Chris G.", Developer.getName());
+        assertEquals("Derek", Developer.getName());
+    }
+
+    @Test
+    public void getGithubId_returns_correct_githubId() {
+        // TODO: Replace Chris G. with your name as shown on
+        // <https://bit.ly/cs156-f25-teams>
+        assertEquals("derekkirschbaum", Developer.getGithubId());
+    }
+
+    @Test
+    public void getTeam_returns_team_with_correct_name() {
+        Team  t = Developer.getTeam();
+        assertEquals("f25-00", t.getName());
+    }
+
+    @Test
+    public void getTeam_returns_team_with_correct_members() {
+        Team  t = Developer.getTeam();
+        assertTrue(t.getMembers().contains("Daniel"),"Team should contain Daniel");
+        assertTrue(t.getMembers().contains("Kate"),"Team should contain Kate");
+        assertTrue(t.getMembers().contains("Divyani"),"Team should contain Divyani");
+        assertTrue(t.getMembers().contains("Sanjay"),"Team should contain Sanjay");
+        assertTrue(t.getMembers().contains("Samuel"),"Team should contain Samuel");
+        assertTrue(t.getMembers().contains("Derek"),"Team should contain Derek");
+        assertTrue(t.getMembers().contains("Phill"),"Team should contain Phill");
+        // ... etc
     }
 
     // TODO: Add additional tests as needed to get to 100% jacoco line coverage, and
