@@ -89,6 +89,7 @@ public class TeamTest {
         Team tmp2 = new Team("tmp2");
 
         tmp1.addMember("Member 1");
+        tmp2.addMember("Member 1");
         tmp2.addMember("Member 2");
 
         assertEquals(false, tmp1.equals(tmp2));
